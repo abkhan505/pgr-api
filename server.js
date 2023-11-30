@@ -1000,6 +1000,10 @@ app.get('/', (request, response) => {
     response.sendFile(__dirname + '/index.html') // Responding to the request by sending our index.html file. __dirname states that wherever server.js file is located, that is where we will start looking four our files.
 })
 
+app.get('/api', (request, response) => { // Responding to API request by sending JSON. '/:name' is part of the URL so someone can replcae this with a specific object name and receive just that back. ':' reminds us that it is part of the query parameter. It is not part of the path.
+    response.json(constructs)
+})
+
 app.get('/api/:name', (request, response) => { // Responding to API request by sending JSON. '/:name' is part of the URL so someone can replcae this with a specific object name and receive just that back. ':' reminds us that it is part of the query parameter. It is not part of the path.
     const constructName = request.params.name.toLowerCase() // Variable that contains any "parameter" which returns a specific object within our API.
     // Conditional that responds with a specific object from our list of objects
