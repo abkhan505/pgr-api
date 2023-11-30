@@ -3,7 +3,7 @@ const app = express() // Holds express in a variable
 const cors = require('cors')
 const PORT = 8000 // Variable containing port, can be any number
 
-app.use(express.static('css'))
+app.use(express.static(__dirname + '/public'))
 app.use(cors())
 
 // Object that we will respond to the client with 
