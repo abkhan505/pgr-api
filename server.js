@@ -3,6 +3,7 @@ const app = express() // Holds express in a variable
 const cors = require('cors')
 const PORT = 8000 // Variable containing port, can be any number
 
+app.use(express.static('css'))
 app.use(cors())
 
 // Object that we will respond to the client with 
@@ -998,9 +999,6 @@ let constructs = {
 // GET request (Read request) that looks for the URL requesting the index.html file, responds with it
 app.get('/', (request, response) => {
     response.sendFile(__dirname + '/index.html') // Responding to the request by sending our index.html file. __dirname states that wherever server.js file is located, that is where we will start looking four our files.
-    response.sendFile(__dirname + '/css/style.css')
-    response.sendFile(__dirname + '/css/reset.css')
-    response.sendFile(__dirname + '/css/normalize.css')
 })
 
 app.get('/api', (request, response) => { // Responding to API request by sending JSON. '/:name' is part of the URL so someone can replcae this with a specific object name and receive just that back. ':' reminds us that it is part of the query parameter. It is not part of the path.
