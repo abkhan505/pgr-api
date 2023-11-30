@@ -40,6 +40,14 @@ section {
      padding: 3rem 1.5rem;
 }
 
+.textpad {
+     padding: 1rem 0 0 0;
+}
+
+.textpadder {
+     padding: 1.5em 0 0 0;
+}
+
 .container {
      margin: 0 auto;
      position: relative;
@@ -72,7 +80,7 @@ section {
      line-height: 1.25;
 }
 
-.title.is-5 {
+.callsandendpoints {
      font-size: 1.25rem;
 }
 
@@ -90,6 +98,33 @@ table {
      color: #363636 !important;
 }
 
+.content:not(:last-child) {
+     margin-bottom: 1.5rem;
+}
+
+.content ul {
+     list-style: disc outside;
+     margin-left: 2em;
+     margin-top: 1em;
+}
+
+a {
+     color:#96b7eb;
+}
+
+.table th {
+     text-align: left;
+}
+
+.table td, .table th {
+     border: 1px solid #dbdbdb;
+     padding: .5em .75em;
+     vertical-align: top;
+}
+
+.table.is-bordered tr:last-child th {
+     border-bottom-width: 1px;
+}
 
 /******************************************
 /* ADDITIONAL STYLES

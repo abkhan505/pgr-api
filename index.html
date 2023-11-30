@@ -11,9 +11,10 @@
 		<title>WuWa</title>
 
 		<!-- external CSS link -->
-        <link rel="stylesheet" type="text/css" href="css/reset.css">
-		<link rel="stylesheet" type="text/css" href="css/normalize.css">
-		<link rel="stylesheet" type="text/css" href="css/style.css">
+        <!-- remove "public/" before pushing to GH so Vercel can properly display CSS-->
+        <link rel="stylesheet" type="text/css" href="public/css/reset.css">
+		<link rel="stylesheet" type="text/css" href="public/css/normalize.css">
+		<link rel="stylesheet" type="text/css" href="public/css/style.css">
     </head>    
     <body>
         <section class="section">
@@ -21,16 +22,16 @@
                 <section class="box">
                     <h1 class="title">Punishing Gray Raven API</h1>
                     <h2 class="subtitle">A repository dedicated to storing information on every playable construct within game.<br>Updated to the current CN patch.</h2>
-                    <p>API endpoint: <ahref='https://pgr-api.vercel.app/api/'>https://pgr-api.vercel.app/api/</ahref></p>
-                    <section class="content">
+                    <p class="textpad">API endpoint: <a href='https://pgr-api.vercel.app/api/'>https://pgr-api.vercel.app/api/</a></p>
+                    <section class="content textpad">
                         <ul>
-                            <li>Get the full list of constructs: <ahref='https://pgr-api.vercel.app/api/'>https://pgr-api.vercel.app/api/</ahref></li>
-                            <li>Query the API for a specific construct by construct title:<br>
-                            <b><ahref='https://pgr-api.vercel.app/api/scire'>https://pgr-api.vercel.app/api/scire</ahref></b></li>
+                            <li>Get the full list of constructs: <a href='https://pgr-api.vercel.app/api/'>https://pgr-api.vercel.app/api/</a></li>
+                            <li class="textpadsmall">Query the API for a specific construct by frame title:<br>
+                            <b><a href='https://pgr-api.vercel.app/api/scire'>https://pgr-api.vercel.app/api/scire</a></b></li>
                         </ul>
                     </section>
-                    <h2 class="title.is-5">API Calls & Endpoints</h2>
-                    <table class="box bordered">
+                    <h2 class="callsandendpoints">API Calls & Endpoints</h2>
+                    <table class="table box bordered">
                         <thead>
                             <tr>
                                 <th>HTTP method</th>
@@ -55,9 +56,157 @@
                                 <td>
                                     <code class="darktext">/api/:construct</code>
                                 </td>
-                                <td>Returns an object containing information of the given construct within this database. Must use constructs title.<b>
+                                <td>Returns an object containing information of the given construct within this database. Must use constructs frame.<b>
                                     Example: 'Scire' not 'Karenina'.
                                 </b></td>
+                            </tr>
+                            <tr></tr>
+                        </tbody>
+                    </table>
+                    <h2 class="callsandendpoints textpad">Field Reference</h2>
+                    <table class="table box bordered">
+                        <thead>
+                            <tr>
+                                <th>Field name</th>
+                                <th>Description</th>
+                                <th>Data Type</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <code class="darktext">name</code>
+                                </td>
+                                <td>
+                                    <code class="darktext">Construct name</code>
+                                </td>
+                                <td>String</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <code class="darktext">title</code>
+                                </td>
+                                <td>
+                                    <code class="darktext">Construct's frame name</code>
+                                </td>
+                                <td>String</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <code class="darktext">rank</code>
+                                </td>
+                                <td>
+                                    <code class="darktext">Construct's rank</code>
+                                </td>
+                                <td>String</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <code class="darktext">class</code>
+                                </td>
+                                <td>
+                                    <code class="darktext">Construct's class</code>
+                                </td>
+                                <td>String</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <code class="darktext">element</code>
+                                </td>
+                                <td>
+                                    <code class="darktext">Construct's element</code>
+                                </td>
+                                <td>String</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <code class="darktext">weapon</code>
+                                </td>
+                                <td>
+                                    <code class="darktext">Construct's weapon type</code>
+                                </td>
+                                <td>String</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <code class="darktext">signature</code>
+                                </td>
+                                <td>
+                                    <code class="darktext">Construct's signature weapon</code>
+                                </td>
+                                <td>String</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <code class="darktext">faction</code>
+                                </td>
+                                <td>
+                                    <code class="darktext">Construct's associated faction</code>
+                                </td>
+                                <td>String</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <code class="darktext">gift</code>
+                                </td>
+                                <td>
+                                    <code class="darktext">Construct's preferred gift</code>
+                                </td>
+                                <td>String</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <code class="darktext">serviceTime</code>
+                                </td>
+                                <td>
+                                    <code class="darktext">Construct's service time</code>
+                                </td>
+                                <td>String</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <code class="darktext">mentalAge</code>
+                                </td>
+                                <td>
+                                    <code class="darktext">Construct's mental age</code>
+                                </td>
+                                <td>String</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <code class="darktext">activationDate</code>
+                                </td>
+                                <td>
+                                    <code class="darktext">Construct's activation date/birthday</code>
+                                </td>
+                                <td>String</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <code class="darktext">height</code>
+                                </td>
+                                <td>
+                                    <code class="darktext">Construct's height</code>
+                                </td>
+                                <td>String</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <code class="darktext">weight</code>
+                                </td>
+                                <td>
+                                    <code class="darktext">Construct's weight</code>
+                                </td>
+                                <td>String</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <code class="darktext">vitalFluidType</code>
+                                </td>
+                                <td>
+                                    <code class="darktext">Construct's vital fluid type</code>
+                                </td>
+                                <td>String</td>
                             </tr>
                             <tr></tr>
                         </tbody>
