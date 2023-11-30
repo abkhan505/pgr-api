@@ -1013,3 +1013,5 @@ app.get('/api/:name', (request, response) => { // Responding to API request by s
 app.listen(process.env.PORT || PORT, () => { // Establishes the port that the server listens for. process.env.PORT tells the code to use the PORT that our API host uses, otherwise use our own PORT.
     console.log(`Server running on port ${PORT}`) // Informs us the server is running
 })
+
+module.exports = app;
