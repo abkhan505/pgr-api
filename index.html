@@ -3,13 +3,67 @@
     <head>
         <meta charset="UTF-8">
         <title>PGR API</title>
+    	<meta name="Punishing Gray Raven API" content="A repository dedicated to storing information on every playable construct within game.">
+    	<meta name="keywords" content="PGR, API, database, constructs, characters">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap" rel="stylesheet"> 
+
+		<title>WuWa</title>
+
+		<!-- external CSS link -->
+		<link rel="stylesheet" href="css/normalize.css">
+		<link rel="stylesheet" href="css/style.css">
     </head>    
     <body>
-        <h1>Punishing Gray Raven API</h1>
-        <h2>A repository dedicated to storing information on every playable construct within game.</h2>
-        <h4>Project created by</h4>
-        <h3></h3>
-        <span>Endpoint:</span>
+        <section class="section">
+            <section class="container">
+                <section class="box">
+                    <h1 class="title">Punishing Gray Raven API</h1>
+                    <h2 class="subtitle">A repository dedicated to storing information on every playable construct within game.<br>Updated to the current CN patch.</h2>
+                    <p>API endpoint: <ahref='https://pgr-api.vercel.app/api/'>https://pgr-api.vercel.app/api/</ahref></p>
+                    <section class="content">
+                        <ul>
+                            <li>Get the full list of constructs: <ahref='https://pgr-api.vercel.app/api/'>https://pgr-api.vercel.app/api/</ahref></li>
+                            <li>Query the API for a specific construct by construct title:<br>
+                            <b><ahref='https://pgr-api.vercel.app/api/scire'>https://pgr-api.vercel.app/api/scire</ahref></b></li>
+                        </ul>
+                    </section>
+                    <h2 class="title.is-5">API Calls & Endpoints</h2>
+                    <table class="box bordered">
+                        <thead>
+                            <tr>
+                                <th>HTTP method</th>
+                                <th>Endpoint</th>
+                                <th>Reponse</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <code class="darktext">GET</code>
+                                </td>
+                                <td>
+                                    <code class="darktext">/api</code>
+                                </td>
+                                <td>Returns an array of all the construct within this database.</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <code class="darktext">GET</code>
+                                </td>
+                                <td>
+                                    <code class="darktext">/api/:construct</code>
+                                </td>
+                                <td>Returns an object containing information of the given construct within this database. Must use constructs title.<b>
+                                    Example: 'Scire' not 'Karenina'.
+                                </b></td>
+                            </tr>
+                            <tr></tr>
+                        </tbody>
+                    </table>
+                </section>
+            </section>
+        </section>
         
 
     <script src="main.js"></script>

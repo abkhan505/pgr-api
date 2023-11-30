@@ -1,0 +1,103 @@
+/* Box Model Hack */
+* {
+     box-sizing: border-box;
+}
+
+/* Clear fix hack */
+.clearfix:after {
+     content: ".";
+     display: block;
+     clear: both;
+     visibility: hidden;
+     line-height: 0;
+     height: 0;
+}
+
+.clear {
+	clear: both;
+}
+
+/******************************************
+/* BASE STYLES
+/*******************************************/
+
+body {
+     background-color: #222222;
+     font-family: 'Roboto', sans-serif;
+     font-size: 1 rem;
+     line-height: 1.5;
+     
+}
+
+section {
+     display: block;
+}
+/******************************************
+/* LAYOUT
+/*******************************************/
+
+.section {
+     padding: 3rem 1.5rem;
+}
+
+.container {
+     margin: 0 auto;
+     position: relative;
+}
+
+.box {
+     background-color: #fff;
+     border-radius: 6px;
+     box-shadow: 0 2px 3px rgba(10, 10, 10, .1), 0 0 0 1px rgba(10, 10, 10, .1);
+     color: #4a4a4a;
+     display: block;
+     padding: 1.25rem;
+}
+
+.contentWrapper {
+     overflow-x: auto;
+}
+
+.title {
+     color: #363636;
+     font-size: 2rem;
+     font-weight: 600;
+     line-height: 1.125;
+}
+
+.subtitle {
+     color: #4a4a4a;
+     font-size: 1.25rem;
+     font-weight: 400;
+     line-height: 1.25;
+}
+
+.title.is-5 {
+     font-size: 1.25rem;
+}
+
+.bordered {
+     color: #363636;
+}
+
+table {
+     border-collapse: collapse;
+     border-spacing: 0;
+     border: 3px;
+}
+
+.darktext {
+     color: #363636 !important;
+}
+
+
+/******************************************
+/* ADDITIONAL STYLES
+/*******************************************/
+
+@media screen and (min-width: 1088px) {
+     .container {
+       max-width: 960px;
+       width: 960px;
+     }
+   }
