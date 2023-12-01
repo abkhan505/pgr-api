@@ -126,6 +126,10 @@ a {
      border-bottom-width: 1px;
 }
 
+.bold {
+     font-weight:bold; 
+}
+
 /******************************************
 /* ADDITIONAL STYLES
 /*******************************************/
@@ -137,4 +141,8 @@ a {
      }
    }
 
-   
+@media screen and (max-width: 1088px) {
+     .table td, .table th {
+          display: block;
+     }
+   }
