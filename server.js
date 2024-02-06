@@ -7,7 +7,7 @@ app.use(express.static(__dirname + '/public'))
 app.use(cors())
 
 const optionsone = require('./navigation/options1.json')
-const optionstwo = require('./navigation/options2.json')
+const optionstwo = require('./navigation/options2_1.json')
 
 // Object that we will respond to the client with 
 let constructs = { 
