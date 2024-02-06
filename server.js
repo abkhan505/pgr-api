@@ -6,6 +6,8 @@ const PORT = 8000 // Variable containing port, can be any number
 app.use(express.static(__dirname + '/public'))
 app.use(cors())
 
+const optionsone = require('/options1.json')
+
 // Object that we will respond to the client with 
 let constructs = { 
     'lotus': {
@@ -1013,6 +1015,10 @@ app.get('/api/:name', (request, response) => { // Responding to API request by s
     }else{
         response.json(constructs['unknown'])
     }
+})
+
+app.get('/api/options1', function (req, res) {
+    res.json(optionsone);
 })
 
 app.listen(process.env.PORT || PORT, () => { // Establishes the port that the server listens for. process.env.PORT tells the code to use the PORT that our API host uses, otherwise use our own PORT.
