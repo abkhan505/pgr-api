@@ -6,7 +6,8 @@ const PORT = 8000 // Variable containing port, can be any number
 app.use(express.static(__dirname + '/public'))
 app.use(cors())
 
-const optionsone = require('./options1.json')
+const optionsone = require('./navigation/options1.json')
+const optionstwo = require('./navigation/options2.json')
 
 // Object that we will respond to the client with 
 let constructs = { 
@@ -1020,6 +1021,29 @@ app.get('/api/:name', (request, response) => { // Responding to API request by s
 app.get('/optionsone', function (req, res) {
     res.json(optionsone);
 })
+
+// Route to handle requests for /optionstwo/:option1Id
+app.get('/optionstwo/:option1Id', (req, res) => {
+    const option1Id = req.params.option1Id;
+    const jsonFileName = `options2_${option1Id}.json`;
+    const jsonFilePath = path.join(jsonDirectory, jsonFileName);
+  
+    // Check if the JSON file exists
+    if (fs.existsSync(jsonFilePath)) {
+      // Read the JSON file and send its contents as the response
+      fs.readFile(jsonFilePath, 'utf8', (err, data) => {
+        if (err) {
+          console.error('Error reading JSON file:', err);
+          res.status(500).send('Internal Server Error');
+        } else {
+          res.json(JSON.parse(data));
+        }
+      });
+    } else {
+      // If the JSON file does not exist, return a 404 Not Found response
+      res.status(404).send('JSON file not found');
+    }
+  });
 
 app.get('/options1', (req, res) => {
     res.header("Content-Type",'application/json');
