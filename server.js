@@ -6,7 +6,7 @@ const PORT = 8000 // Variable containing port, can be any number
 app.use(express.static(__dirname + '/public'))
 app.use(cors())
 
-const optionsone = require('/options1.json')
+const optionsone = require('./options1.json')
 
 // Object that we will respond to the client with 
 let constructs = { 
