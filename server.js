@@ -1020,12 +1020,12 @@ app.get('/api/:name', (request, response) => { // Responding to API request by s
 app.get('/optionsone', function (req, res) {
     res.json(optionsone);
 })
-/* 
-app.get('/api/options1', (req, res) => {
+
+app.get('/options1', (req, res) => {
     res.header("Content-Type",'application/json');
     res.sendFile(path.join(__dirname, 'options1.json'));
 })
- */
+
 app.listen(process.env.PORT || PORT, () => { // Establishes the port that the server listens for. process.env.PORT tells the code to use the PORT that our API host uses, otherwise use our own PORT.
     console.log(`Server running on port ${PORT}`) // Informs us the server is running
 })
